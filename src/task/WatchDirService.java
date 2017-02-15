@@ -10,11 +10,11 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by jason on 2017/2/14.
  */
-public class WatchDirServer {
+public class WatchDirService {
     private WatchService watchService;
     private boolean notDone = true;
 
-    public WatchDirServer(String dirPath){
+    public WatchDirService(String dirPath){
         init(dirPath);
     }
 
