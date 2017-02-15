@@ -1,4 +1,4 @@
-package task;
+package service;
 
 import config.Config;
 
@@ -32,7 +32,8 @@ public class WatchDirService {
         System.out.print("watch...");
         while (notDone){
             try {
-                WatchKey watchKey = watchService.poll(Config.POLL_INTERVAL_TIME, TimeUnit.SECONDS);
+                WatchKey watchKey = watchService.poll(Config.POLL_TIME_OUT, TimeUnit.SECONDS);
+                System.out.print("change");
                 if(watchKey != null){
                     List<WatchEvent<?>> events = watchKey.pollEvents();
                     for (WatchEvent event : events){

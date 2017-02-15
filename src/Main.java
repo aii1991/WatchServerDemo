@@ -1,5 +1,5 @@
 import config.Config;
-import task.WatchDirService;
+import service.WatchDirService;
 
 /**
  * Created by jason on 2017/2/15.
